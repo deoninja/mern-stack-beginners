@@ -2,17 +2,20 @@ const express = require('express');
 const router = express.Router();
 const {
   getUsers,
-  createUser,
   getUserById,
+  createUser,
+  updateUser,
+  deleteUser,
+  loginUser,
 } = require('../controllers/userController');
+const authMiddleware = require('../middleware/authMiddleware');
 
-// GET all users
-router.get('/', getUsers);
-
-// POST create user
-router.post('/', createUser);
-
-// GET user by ID
-router.get('/:id', getUserById);
+router.route('/').get(authMiddleware, getUsers).post(createUser);
+router.route('/login').post(loginUser);
+router
+  .route('/:id')
+  .get(authMiddleware, getUserById)
+  .put(authMiddleware, updateUser)
+  .delete(authMiddleware, deleteUser);
 
 module.exports = router;

@@ -1,19 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Header = () => {
+function Header() {
   return (
-    <header className="header">
-      <h1>MERN Stack App</h1>
+    <header className="App-header">
+      <h1>MERN Stack for Beginners</h1>
       <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/login">Login</a></li>
-          <li><a href="/dashboard">Dashboard</a></li>
-        </ul>
+        <Link to="/">Home</Link> | <Link to="/login">Login</Link> |{' '}
+        <Link to="/dashboard">Dashboard</Link>
       </nav>
     </header>
   );
-};
+}
 
 export default Header;
-

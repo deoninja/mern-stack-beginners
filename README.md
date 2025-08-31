@@ -1,35 +1,100 @@
-# MERN Stack Development for Beginners
+# MERN Stack for Beginners
 
-A comprehensive guide to learning the MERN stack (MongoDB, Express.js, React, Node.js).
+This project is a boilerplate for a MERN (MongoDB, Express, React, Node.js) stack application. It provides a basic setup for both the client and server, along with a structured directory for lessons and documentation.
 
-## What You'll Learn
+## Project Structure
 
-- Building full-stack web applications
-- REST API development with Express.js
-- Database integration with MongoDB
-- Modern frontend development with React
-- Full deployment strategies
-
-## Repository Structure
-
-This repository is organized into lessons that build upon each other:
-1. Introduction to MERN Stack
-2. Node.js Fundamentals
-3. Express.js Setup and Routing
-4. MongoDB Integration
-5. React Frontend Development
-6. Full Stack Application Integration
-7. Deployment and Best Practices
+```
+mern-stack-beginners/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── package.json
+├── server/
+│   ├── app.js
+│   ├── config/
+│   │   └── database.js
+│   ├── routes/
+│   │   ├── userRoutes.js
+│   │   └── productRoutes.js
+│   ├── controllers/
+│   │   ├── userController.js
+│   │   └── productController.js
+│   ├── models/
+│   │   ├── User.js
+│   │   └── Product.js
+│   ├── middleware/
+│   │   └── authMiddleware.js
+│   └── server.js
+├── client/
+│   ├── public/
+│   │   ├── index.html
+│   │   └── favicon.ico
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Header.js
+│   │   │   ├── Footer.js
+│   │   │   └── UserList.js
+│   │   ├── pages/
+│   │   │   ├── Home.js
+│   │   │   ├── Login.js
+│   │   │   └── Dashboard.js
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   └── styles/
+│   │       └── App.css
+│   └── package.json
+├── docs/
+│   ├── setup-guide.md
+│   ├── api-reference.md
+│   └── deployment-guide.md
+└── lessons/
+    ├── 01-introduction/
+    │   └── README.md
+    ├── 02-nodejs-fundamentals/
+    │   └── README.md
+    ├── 03-express-setup/
+    │   └── README.md
+    ├── 04-mongodb-integration/
+    │   └── README.md
+    ├── 05-react-setup/
+    │   └── README.md
+    ├── 06-full-stack-integration/
+    │   └── README.md
+    └── 07-deployment/
+        └── README.md
+```
 
 ## Getting Started
 
 ### Prerequisites
-- Node.js (v14 or higher)
-- npm or yarn
-- MongoDB Atlas account (or local MongoDB)
-- Git
+
+- Node.js and npm
+- MongoDB
 
 ### Installation
-```bash
-git clone https://github.com/deoninja/mern-stack-beginners.git
-cd mern-stack-beginners
+
+1.  **Backend:**
+    ```bash
+    cd server
+    npm install
+    ```
+
+2.  **Frontend:**
+    ```bash
+    cd client
+    npm install
+    ```
+
+## Available Scripts
+
+### Backend
+
+-   `npm start`: Starts the server.
+-   `npm run dev`: Starts the server in development mode with nodemon.
+
+### Frontend
+
+-   `npm start`: Starts the React development server.
+-   `npm test`: Runs the tests.
+-   `npm run build`: Builds the app for production.
